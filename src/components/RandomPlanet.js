@@ -38,13 +38,14 @@ function RandomPlanet(props) {
         <h1>Random Planet</h1>
       </header>
 
-      <button onClick={() => { 
-        randomPlanet()
-      }}>Random</button>
-
+      <div id= "button">
+        <button onClick={() => { 
+          randomPlanet()
+        }}>Random</button>
+      </div>
 
       {/* <div>{JSON.stringify(currentPlanet)}</div> */}
-      <div>
+      <div id = "random">
         <p>Planet Name: {currentPlanet.name}</p>
         <p>Number of Moons: {currentPlanet.num_moons}</p>
         <p>Color of Planet: {currentPlanet.color}</p>

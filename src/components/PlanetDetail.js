@@ -14,9 +14,10 @@ function PlanetDetail(props) {
         Planet Detail
       </h1>
 
-
-      <p>Color of Planet: {props.location.state.planetColor}</p>
-      <p>Number of Moons: {props.location.state.numMoons}</p>
+      <div id = "random">
+        <p>Color of Planet: {props.location.state.planetColor}</p>
+        <p>Number of Moons: {props.location.state.numMoons}</p>
+      </div>
     </div>
   )
 }
