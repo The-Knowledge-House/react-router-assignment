@@ -19,13 +19,17 @@ function RandomPlanet(props) {
   useEffect(() => { 
     const response = async () => {
       const data = await fetchPlanet();
-      setCurrentPlanet(data)
+      setCurrentPlanet(data.planet)
     }
 
-    response()
+    if(random ===true) {
+      response();
+      setRandom(false);
+    }
 
-  },[])
+  }, [random])
 
+  console.log(currentPlanet.name);
 
 
   return (
@@ -40,6 +44,12 @@ function RandomPlanet(props) {
 
 
       {/* <div>{JSON.stringify(currentPlanet)}</div> */}
+      <div>
+        <p>Planet Name: {currentPlanet.name}</p>
+        <p>Number of Moons: {currentPlanet.num_moons}</p>
+        <p>Color of Planet: {currentPlanet.color}</p>
+      </div>
+
     </div>
   )
 }
