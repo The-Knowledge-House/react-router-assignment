@@ -1,0 +1,37 @@
+nav {
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 10vh;
+	background: rgba(128, 125, 122, 0.521) !important;
+	color: white;
+	margin: -15px 0;
+	font-family: "Chakra Petch", sans-serif;
+}
+
+ul {
+	width: 100%;
+	margin: 0 1em;
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+li {
+	background: rgb(0, 0, 0);
+	padding: 0 10px;
+	font-size: 2em;
+	list-style-type: none;
+}
+
+li:hover {
+	background: rgb(32, 32, 32);
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}

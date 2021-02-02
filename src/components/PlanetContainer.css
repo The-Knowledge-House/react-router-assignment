@@ -1,0 +1,14 @@
+.planet-container {
+	margin: 1em auto;
+	text-align: center;
+	padding: 2em;
+	width: 30%;
+	border: 2px solid black;
+	background: white;
+	color: black;
+}
+
+.planet-container img {
+	height: 50px;
+	width: 50px;
+}

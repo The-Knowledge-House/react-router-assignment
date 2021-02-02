@@ -1,31 +1,23 @@
-import './App.css';
-import { Link, Route } from 'react-router-dom';
-import Home from './components/Home'
-import Planets from './components/Planets'
-
-
+import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Planets from "./components/Planets";
+import RandomPlanet from "./components/RandomPlanet";
 
 function App() {
-  return (
-    <div>
-        <nav>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-
-          <li>
-            <Link to="/planets">Planets</Link>
-          </li>
-        </nav>
-
-        <main>
-          <Route exact path="/" component={Home} />
-          <Route path="/planets" component={Planets} />
-        </main>
-      </div>
-      
-    
-  );
+	return (
+		<div>
+			<Nav />
+			<div className="App">
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route path="/planets" component={Planets} />
+					<Route path="/random" component={RandomPlanet} />
+				</Switch>
+			</div>
+		</div>
+	);
 }
 
 export default App;
