@@ -34,7 +34,7 @@ function Planets(props) {
       <ul>
         {
           planetName.map((planet) => { 
-            return <li><Link to={
+            return <li key={planet.id}><Link to={
               {
                 pathname: "/planetDetail",
                 state: {
