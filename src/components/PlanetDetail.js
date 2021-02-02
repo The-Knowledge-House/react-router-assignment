@@ -1,3 +1,8 @@
+
+
+
+
+
 function PlanetDetail(props) {
   return (
     <div>
@@ -7,3 +12,5 @@ function PlanetDetail(props) {
     </div>
   )
 }
+
+export default PlanetDetail;
