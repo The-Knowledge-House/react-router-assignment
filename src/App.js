@@ -3,6 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Planets from './components/Planets';
 import PlanetRandom from './components/RandomPlanet';
+import PlanetDetail from './components/PlanetDetail';
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
         <Switch>  
           <Route exact path="/" component={Home} />
           <Route path="/planets" component={Planets} />
-          <Route path="/planetRandom" component={ PlanetRandom } />
+          <Route path="/planetRandom" component={PlanetRandom} />
+          <Route exact path="/planetDetail" component={PlanetDetail} />
         </Switch>
       </main>
       </div>
