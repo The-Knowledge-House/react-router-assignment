@@ -1,30 +1,22 @@
-import './App.css';
-import { Link, Route } from 'react-router-dom';
-import Home from './components/Home'
-import Planets from './components/Planets'
-
-
+import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Planets from "./components/Planets";
+import RandomPlanet from "./components/RandomPlanet";
 
 function App() {
   return (
     <div>
-        <nav>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-
-          <li>
-            <Link to="/planets">Planets</Link>
-          </li>
-        </nav>
-
-        <main>
+      <Header />
+      <main className="app-main">
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/planets" component={Planets} />
-        </main>
-      </div>
-      
-    
+          <Route path="/randomPlanet" component={RandomPlanet} />
+        </Switch>
+      </main>
+    </div>
   );
 }
 
