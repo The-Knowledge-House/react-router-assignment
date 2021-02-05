@@ -3,6 +3,9 @@
 	height: 95vh;
 }
 
+.random-planet-container li {
+}
+
 .random-planet-container button {
 	font-family: "Chakra Petch", sans-serif;
 	background: black;

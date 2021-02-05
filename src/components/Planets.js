@@ -1,7 +1,7 @@
 import "./Planets.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import PlanetContainer from "./PlanetContainer";
+import {Link} from 'react-router-dom'
 
 export default function Planets(props) {
 	const [planetData, setPlanetData] = useState([]);
@@ -20,8 +20,38 @@ export default function Planets(props) {
 	return (
 		<div className="planets">
 			{planetData.map((entry, index) => {
-				return <PlanetContainer {...entry} key={index} />;
+				// return <PlanetContainer {...entry} key={index} />;
+				return (
+					<li key={index}>
+						<Link
+							to={{
+							pathname: "/planetContainer",
+							state: {
+								name: entry.name,
+								color: entry.color,
+								moon: entry.num_moons
+							}
+							}}>
+							{entry.name}
+					</Link>
+					</li>
+				)
 			})}
 		</div>
 	);
 }
+
+// <li key={index}>
+{/* <NavLink
+to={{
+  pathname: "/planetDetail",
+  state: {
+	name: planetObj.name,
+	color: planetObj.color,
+	moons: planetObj.num_moons,
+  },
+}}
+>
+{planetObj.name}
+</NavLink>
+</li> */}

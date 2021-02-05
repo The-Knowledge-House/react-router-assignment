@@ -19,7 +19,18 @@ export default function RandomPlanet() {
 
 	return (
 		<div className="random-planet-container">
-			<PlanetContainer name={randomPlanet.name} num_moons={randomPlanet.num_moons} color={randomPlanet.color} />
+			<div className="planet-container">
+				<p>
+					<strong>Planet Name: </strong> {randomPlanet.name}
+				</p>
+				<p>
+					<strong>Number of moons: </strong> {randomPlanet.num_moons}
+				</p>
+				<p>
+					<strong>Color: </strong> {randomPlanet.color}
+				</p>
+				<img src="https://www.svgrepo.com/show/126338/planet.svg" />
+			</div>
 			<button onClick={fetchRandomPlanet}>Get Random Planet</button>
 		</div>
 	);
