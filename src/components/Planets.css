@@ -1,0 +1,12 @@
+.planets {
+	margin-top: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.planets li {
+	width: 25%;
+	margin: 0 auto;
+}

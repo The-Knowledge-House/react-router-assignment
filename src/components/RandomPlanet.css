@@ -1,0 +1,23 @@
+.random-planet-container {
+	text-align: center;
+	height: 95vh;
+}
+
+.random-planet-container li {
+}
+
+.random-planet-container button {
+	font-family: "Chakra Petch", sans-serif;
+	background: black;
+	color: white;
+	padding: 2em;
+	border: none;
+	outline: none;
+	font-size: 1.1em;
+	border-radius: 5%;
+}
+
+.random-planet-container button:hover {
+	background: rgb(70, 70, 70);
+	cursor: pointer;
+}
