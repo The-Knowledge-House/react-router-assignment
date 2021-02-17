@@ -1,6 +1,6 @@
+import { NavLink } from "react-router-dom";
 import { planetInfo } from "../service/getPlanet";
 import { useState, useEffect } from "react";
-import PlanetDetail from "./PlanetDetail";
 
 function Planets(props) {
   const [planet, setPlanet] = useState([]);
@@ -16,12 +16,23 @@ function Planets(props) {
 
   return (
     <div className="planets">
-      <h1>Planet List</h1>
+      <h3>Planet List</h3>
       {planet.map((planetObj, index) => {
         return (
-          <div>
-            <PlanetDetail {...planetObj} key={index} />
-          </div>
+          <li key={index}>
+            <NavLink
+              to={{
+                pathname: "/planetDetail",
+                state: {
+                  name: planetObj.name,
+                  color: planetObj.color,
+                  moons: planetObj.num_moons,
+                },
+              }}
+            >
+              {planetObj.name}
+            </NavLink>
+          </li>
         );
       })}
     </div>

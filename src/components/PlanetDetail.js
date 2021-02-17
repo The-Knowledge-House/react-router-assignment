@@ -1,15 +1,14 @@
 function PlanetDetail(props) {
   return (
     <div className="planet-details">
-      <h3>
-        Planet <span>{props.name}</span>{" "}
-      </h3>
+      <h2>Planet Detail</h2>
+      <h3>{props.location.state.name}</h3>
       <p>
-        Color: <span>{props.color}</span>
+        Color: <span>{props.location.state.color}</span>
       </p>
-      <p>
+      <p>sta
         {" "}
-        Number of Moons : <span>{props.num_moons}</span>
+        Number of Moons : <span>{props.location.state.moons}</span>
       </p>
     </div>
   );
