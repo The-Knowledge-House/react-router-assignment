@@ -1,0 +1,40 @@
+.app-links {
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.app-title {
+  font-size: 1.75rem;
+  width: 12rem;
+  padding: 3px 0;
+  margin-left: 20px;
+  overflow: hidden;
+  display: flex;
+}
+.app-nav {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-right: 40px;
+  padding: 4px 0;
+}
+
+.app-nav li {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.app-nav li a {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+}
